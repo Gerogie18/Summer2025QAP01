@@ -14,17 +14,17 @@ public class Combat {
         action.perform(attacker, defender);
 
         // Check for defeat = defender
-        if (defender.getHitPoints() <= 0) {
+        if (defender.getBasehitPoints() <= 0) {
             System.out.println(defender.getClass().getSimpleName() + " has been defeated!");
             // Optional: end combat, trigger loot, XP, etc.
         }
 
         //check for defeat = attackers
-        if (attacker.getHitPoints() <= 0) {
+        if (attacker.getBasehitPoints() <= 0) {
             System.out.println(attacker.getClass().getSimpleName() + " has been defeated!");
         }
 
-        System.out.println("Attacker HP: " + attacker.getHitPoints());
-        System.out.println("Defender HP: " + defender.getHitPoints());
+        System.out.println("Attacker HP: " + attacker.getBasehitPoints());
+        System.out.println("Defender HP: " + defender.getBasehitPoints());
     }
 }

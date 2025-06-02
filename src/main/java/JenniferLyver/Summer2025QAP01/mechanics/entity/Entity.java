@@ -4,20 +4,20 @@ import JenniferLyver.Summer2025QAP01.utils.ValidationUtils;
 
 public abstract class Entity {
     private int name;
-    private int hitPoints;
-    private int defense;
-    private int attackSpeed;
+    private int baseHitPoints;
+    private int baseDefense;
+    private int baseAttackSpeed;
     private int baseStrength;
     private int baseMagic;
 
-    public Entity(int name, int hitPoints, int defense, int attackSpeed, int baseStrength, int baseMagic) {
+    public Entity(int name, int baseHitPoints, int baseDefense, int baseAttackSpeed, int baseStrength, int baseMagic) {
         this.name = name;
-        ValidationUtils.validatePositiveValue(hitPoints, "Hit Points");
-        this.hitPoints = hitPoints;
-        ValidationUtils.validatePositiveValue(defense, "Defense");
-        this.defense = defense;
-        ValidationUtils.validatePositiveValue(attackSpeed, "Attack Speed");
-        this.attackSpeed = attackSpeed;
+        ValidationUtils.validatePositiveValue(baseHitPoints, "Hit Points");
+        this.baseHitPoints = baseHitPoints;
+        ValidationUtils.validatePositiveValue(baseDefense, "baseDefence");
+        this.baseDefense = baseDefense;
+        ValidationUtils.validatePositiveValue(baseAttackSpeed, "Attack Speed");
+        this.baseAttackSpeed = baseAttackSpeed;
         ValidationUtils.validatePositiveValue(baseStrength, "Base Strength");
         this.baseStrength = baseStrength;
         ValidationUtils.validatePositiveValue(baseMagic, "Base Magic");
@@ -32,31 +32,31 @@ public abstract class Entity {
         this.name = name;
     }
 
-    public int getHitPoints() {
-        return hitPoints;
+    public int getBaseHitPoints() {
+        return baseHitPoints;
     }
 
-    public void setHitPoints(int hitPoints) {
-        ValidationUtils.validatePositiveValue(hitPoints, "Hit Points");
-        this.hitPoints = hitPoints;
+    public void setBaseHitPoints(int basehitPoints) {
+        ValidationUtils.validatePositiveValue(basehitPoints, "Hit Points");
+        this.baseHitPoints = basehitPoints;
     }
 
-    public int getDefense() {
-        return defense;
+    public int getBaseDefense() {
+        return baseDefense;
     }
 
-    public void setDefense(int defense) {
-        ValidationUtils.validatePositiveValue(defense, "Defense");
-        this.defense = defense;
+    public void setBaseDefense(int baseDefence) {
+        ValidationUtils.validatePositiveValue(baseDefence, "baseDefence");
+        this.baseDefense = baseDefence;
     }
 
-    public int getAttackSpeed() {
-        return attackSpeed;
+    public int getBaseAttackSpeed() {
+        return baseAttackSpeed;
     }
 
-    public void setAttackSpeed(int attackSpeed) {
-        ValidationUtils.validatePositiveValue(attackSpeed, "Attack Speed");
-        this.attackSpeed = attackSpeed;
+    public void setBaseAttackSpeed(int baseAttackSpeed) {
+        ValidationUtils.validatePositiveValue(baseAttackSpeed, "Attack Speed");
+        this.baseAttackSpeed = baseAttackSpeed;
     }
 
     public int getBaseStrength() {

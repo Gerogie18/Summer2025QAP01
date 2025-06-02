@@ -22,9 +22,9 @@ public class EntityTest {
     @Test
     public void testSettersWithValidValues() {
         TestEntity entity = new TestEntity(1, 100, 20, 5, 10, 15);
-        entity.setHitPoints(120);
-        entity.setDefense(25);
-        entity.setAttackSpeed(6);
+        entity.setBaseHitPoints(120);
+        entity.setBaseDefense(25);
+        entity.setBaseAttackSpeed(6);
         entity.setBaseStrength(12);
         entity.setBaseMagic(18);
 
@@ -36,9 +36,9 @@ public class EntityTest {
     public void testSettersWithInvalidValues() {
         TestEntity entity = new TestEntity(1, 100, 20, 5, 10, 15);
 
-        assertThrows(IllegalArgumentException.class, () -> entity.setHitPoints(0));
-        assertThrows(IllegalArgumentException.class, () -> entity.setDefense(-1));
-        assertThrows(IllegalArgumentException.class, () -> entity.setAttackSpeed(0));
+        assertThrows(IllegalArgumentException.class, () -> entity.setBaseHitPoints(0));
+        assertThrows(IllegalArgumentException.class, () -> entity.setBaseDefense(-1));
+        assertThrows(IllegalArgumentException.class, () -> entity.setBaseAttackSpeed(0));
         assertThrows(IllegalArgumentException.class, () -> entity.setBaseStrength(-5));
         assertThrows(IllegalArgumentException.class, () -> entity.setBaseMagic(0));
     }
