@@ -76,4 +76,16 @@ public abstract class Entity {
         ValidationUtils.validatePositiveValue(baseMagic, "Base Magic");
         this.baseMagic = baseMagic;
     }
+
+    @Override
+    public String toString() {
+        return "Entity{" +
+                "name='" + name + '\'' +
+                ", baseHitPoints=" + baseHitPoints +
+                ", baseDefense=" + baseDefense +
+                ", baseAttackSpeed=" + baseAttackSpeed +
+                ", baseStrength=" + baseStrength +
+                ", baseMagic=" + baseMagic +
+                '}';
+    }
 }

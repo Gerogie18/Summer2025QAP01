@@ -62,4 +62,13 @@ public class PlayerEntity extends Entity{
         ValidationUtils.validatePositiveValue(experienceToNextLevel, "Experience to Next Level");
         this.experienceToNextLevel = experienceToNextLevel;
     }
+
+    @Override
+    public String toString() {
+        return "PlayerEntity{" +
+                "playerLevel=" + playerLevel +
+                ", playerExperience=" + playerExperience +
+                ", experienceToNextLevel=" + experienceToNextLevel +
+                '}';
+    }
 }

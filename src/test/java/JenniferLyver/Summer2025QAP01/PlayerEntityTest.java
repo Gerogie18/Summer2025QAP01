@@ -68,7 +68,7 @@ public class PlayerEntityTest {
 
     @Test
     public void testInvalidExperienceGainThrowsException() {
-        PlayerEntity player = new PlayerEntity(1, 100, 10, 1, 10, 10, 1);
+        PlayerEntity player = new PlayerEntity("slime", 100, 10, 1, 10, 10, 1);
         assertThrows(IllegalArgumentException.class, () -> player.gainExperience(0));
         assertThrows(IllegalArgumentException.class, () -> player.gainExperience(-10));
     }
