@@ -9,7 +9,7 @@ public class PlayerEntityTest {
     @Test
     public void testConstructorInitializesCorrectly() {
         PlayerEntity player = new PlayerEntity("Slime", 100, 10, 1, 10, 10, 1);
-        assertEquals("Slime", player.getPlayerLevel());
+        assertEquals(1, player.getPlayerLevel());
         assertEquals(0, player.getPlayerExperience());
         assertTrue(player.getExperienceToNextLevel() > 0);
     }
