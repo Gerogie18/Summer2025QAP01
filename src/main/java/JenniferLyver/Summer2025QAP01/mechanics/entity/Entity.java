@@ -3,14 +3,14 @@ package JenniferLyver.Summer2025QAP01.mechanics.entity;
 import JenniferLyver.Summer2025QAP01.utils.ValidationUtils;
 
 public abstract class Entity {
-    private int name;
+    private String name;
     private int baseHitPoints;
     private int baseDefense;
     private int baseAttackSpeed;
     private int baseStrength;
     private int baseMagic;
 
-    public Entity(int name, int baseHitPoints, int baseDefense, int baseAttackSpeed, int baseStrength, int baseMagic) {
+    public Entity(String name, int baseHitPoints, int baseDefense, int baseAttackSpeed, int baseStrength, int baseMagic) {
         this.name = name;
         ValidationUtils.validatePositiveValue(baseHitPoints, "Hit Points");
         this.baseHitPoints = baseHitPoints;
@@ -24,11 +24,11 @@ public abstract class Entity {
         this.baseMagic = baseMagic;
     }
 
-    public int getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(int name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -36,9 +36,9 @@ public abstract class Entity {
         return baseHitPoints;
     }
 
-    public void setBaseHitPoints(int basehitPoints) {
-        ValidationUtils.validatePositiveValue(basehitPoints, "Hit Points");
-        this.baseHitPoints = basehitPoints;
+    public void setBaseHitPoints(int baseHitPoints) {
+        ValidationUtils.validatePositiveValue(baseHitPoints, "Hit Points");
+        this.baseHitPoints = baseHitPoints;
     }
 
     public int getBaseDefense() {

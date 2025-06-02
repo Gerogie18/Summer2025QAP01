@@ -6,7 +6,7 @@ public class EnemyEntity extends Entity {
     private int experiencePoints;
     private int enemyLevel;
 
-    public EnemyEntity(int name, int hitPoints, int defense, int attackSpeed, int baseStrength, int baseMagic, int experiencePoints, int enemyLevel) {
+    public EnemyEntity(String name, int hitPoints, int defense, int attackSpeed, int baseStrength, int baseMagic, int experiencePoints, int enemyLevel) {
         super(name, hitPoints, defense, attackSpeed, baseStrength, baseMagic);
         ValidationUtils.validatePositiveValue(experiencePoints, "Experience Points");
         this.experiencePoints = experiencePoints;

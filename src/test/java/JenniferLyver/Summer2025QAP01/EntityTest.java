@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 // Dummy concrete subclass for testing Entity
 class TestEntity extends Entity {
-    public TestEntity(int name, int hitPoints, int defense, int attackSpeed, int baseStrength, int baseMagic) {
-        super(name, hitPoints, defense, attackSpeed, baseStrength, baseMagic);
+    public TestEntity(int name, int baseHitPoints, int baseDefense, int baseAttackSpeed, int baseStrength, int baseMagic) {
+        super(name, baseHitPoints, baseDefense, baseAttackSpeed, baseStrength, baseMagic);
     }
 }
 

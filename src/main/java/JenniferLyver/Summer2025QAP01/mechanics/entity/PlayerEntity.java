@@ -7,7 +7,7 @@ public class PlayerEntity extends Entity{
     private int playerExperience;
     private int experienceToNextLevel;
 
-    public PlayerEntity(int name, int hitPoints, int defense, int attackSpeed, int baseStrength, int baseMagic, int playerLevel) {
+    public PlayerEntity(String name, int hitPoints, int defense, int attackSpeed, int baseStrength, int baseMagic, int playerLevel) {
         super(name, hitPoints, defense, attackSpeed, baseStrength, baseMagic);
         ValidationUtils.validatePositiveValue(playerLevel, "Player Level");
         this.playerLevel = playerLevel;
