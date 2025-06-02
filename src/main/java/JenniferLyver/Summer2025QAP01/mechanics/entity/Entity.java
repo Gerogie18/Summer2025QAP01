@@ -3,60 +3,60 @@ package JenniferLyver.Summer2025QAP01.mechanics.entity;
 import JenniferLyver.Summer2025QAP01.utils.ValidationUtils;
 
 public abstract class Entity {
-    private int name;
-    private int hitPoints;
-    private int defense;
-    private int attackSpeed;
+    private String name;
+    private int baseHitPoints;
+    private int baseDefense;
+    private int baseAttackSpeed;
     private int baseStrength;
     private int baseMagic;
 
-    public Entity(int name, int hitPoints, int defense, int attackSpeed, int baseStrength, int baseMagic) {
+    public Entity(String name, int baseHitPoints, int baseDefense, int baseAttackSpeed, int baseStrength, int baseMagic) {
         this.name = name;
-        ValidationUtils.validatePositiveValue(hitPoints, "Hit Points");
-        this.hitPoints = hitPoints;
-        ValidationUtils.validatePositiveValue(defense, "Defense");
-        this.defense = defense;
-        ValidationUtils.validatePositiveValue(attackSpeed, "Attack Speed");
-        this.attackSpeed = attackSpeed;
+        ValidationUtils.validatePositiveValue(baseHitPoints, "Hit Points");
+        this.baseHitPoints = baseHitPoints;
+        ValidationUtils.validatePositiveValue(baseDefense, "baseDefence");
+        this.baseDefense = baseDefense;
+        ValidationUtils.validatePositiveValue(baseAttackSpeed, "Attack Speed");
+        this.baseAttackSpeed = baseAttackSpeed;
         ValidationUtils.validatePositiveValue(baseStrength, "Base Strength");
         this.baseStrength = baseStrength;
         ValidationUtils.validatePositiveValue(baseMagic, "Base Magic");
         this.baseMagic = baseMagic;
     }
 
-    public int getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(int name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public int getHitPoints() {
-        return hitPoints;
+    public int getBaseHitPoints() {
+        return baseHitPoints;
     }
 
-    public void setHitPoints(int hitPoints) {
-        ValidationUtils.validatePositiveValue(hitPoints, "Hit Points");
-        this.hitPoints = hitPoints;
+    public void setBaseHitPoints(int baseHitPoints) {
+        ValidationUtils.validatePositiveValue(baseHitPoints, "Hit Points");
+        this.baseHitPoints = baseHitPoints;
     }
 
-    public int getDefense() {
-        return defense;
+    public int getBaseDefense() {
+        return baseDefense;
     }
 
-    public void setDefense(int defense) {
-        ValidationUtils.validatePositiveValue(defense, "Defense");
-        this.defense = defense;
+    public void setBaseDefense(int baseDefence) {
+        ValidationUtils.validatePositiveValue(baseDefence, "baseDefence");
+        this.baseDefense = baseDefence;
     }
 
-    public int getAttackSpeed() {
-        return attackSpeed;
+    public int getBaseAttackSpeed() {
+        return baseAttackSpeed;
     }
 
-    public void setAttackSpeed(int attackSpeed) {
-        ValidationUtils.validatePositiveValue(attackSpeed, "Attack Speed");
-        this.attackSpeed = attackSpeed;
+    public void setBaseAttackSpeed(int baseAttackSpeed) {
+        ValidationUtils.validatePositiveValue(baseAttackSpeed, "Attack Speed");
+        this.baseAttackSpeed = baseAttackSpeed;
     }
 
     public int getBaseStrength() {
@@ -75,5 +75,17 @@ public abstract class Entity {
     public void setBaseMagic(int baseMagic) {
         ValidationUtils.validatePositiveValue(baseMagic, "Base Magic");
         this.baseMagic = baseMagic;
+    }
+
+    @Override
+    public String toString() {
+        return "Entity{" +
+                "name='" + name + '\'' +
+                ", baseHitPoints=" + baseHitPoints +
+                ", baseDefense=" + baseDefense +
+                ", baseAttackSpeed=" + baseAttackSpeed +
+                ", baseStrength=" + baseStrength +
+                ", baseMagic=" + baseMagic +
+                '}';
     }
 }
